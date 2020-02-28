@@ -1,0 +1,7 @@
+C:\Users\Luca\Desktop\Programmieren\Own\_Library\CSVLibrary\CSVLibrary\bin\Debug\netstandard2.0\CSVLibrary.deps.json
+C:\Users\Luca\Desktop\Programmieren\Own\_Library\CSVLibrary\CSVLibrary\bin\Debug\netstandard2.0\CSVLibrary.dll
+C:\Users\Luca\Desktop\Programmieren\Own\_Library\CSVLibrary\CSVLibrary\bin\Debug\netstandard2.0\CSVLibrary.pdb
+C:\Users\Luca\Desktop\Programmieren\Own\_Library\CSVLibrary\CSVLibrary\obj\Debug\netstandard2.0\CSVLibrary.AssemblyInfoInputs.cache
+C:\Users\Luca\Desktop\Programmieren\Own\_Library\CSVLibrary\CSVLibrary\obj\Debug\netstandard2.0\CSVLibrary.AssemblyInfo.cs
+C:\Users\Luca\Desktop\Programmieren\Own\_Library\CSVLibrary\CSVLibrary\obj\Debug\netstandard2.0\CSVLibrary.dll
+C:\Users\Luca\Desktop\Programmieren\Own\_Library\CSVLibrary\CSVLibrary\obj\Debug\netstandard2.0\CSVLibrary.pdb
