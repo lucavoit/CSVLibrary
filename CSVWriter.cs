@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace CSVLibrary
 {
-    public class CSVWriter
+    public class CSVWriter<T>where T : class, new()
     {
         string _Path = "";
 
@@ -25,33 +25,47 @@ namespace CSVLibrary
         /// <typeparam name="T"></typeparam>
         /// <param name="toWrite">needs to have an empty constructor</param>
         /// <param name="seperator">Standard to ';' for csv files</param>
-        public void Write<T>(T toWrite, char seperator = ';') where T : new()
+        public void Write(T toWrite, char seperator = ';') 
         {
             using (StreamWriter sw = new StreamWriter(_Path, false))
             {
                 StringBuilder writeThis = new StringBuilder();
                 var type = toWrite.GetType();
-                foreach (var property in type.GetProperties().Where(p => p.CanWrite))
+                try
                 {
-                    writeThis.Append($"{property.Name}={property.PropertyType.FullName}={property.GetValue(toWrite)};");
+                    foreach (var property in type.GetProperties().Where(p => p.CanWrite))
+                    {
+                        writeThis.Append($"{property.Name}={property.PropertyType.FullName}={property.GetValue(toWrite)};");
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw e;
                 }
                 sw.Write(writeThis);
             }
         }
-        public void Write<t>(List<t> toWrite, char seperator = ';') where t : new()
+        public void Write(List<T> toWrite, char seperator = ';')
         {
             using (StreamWriter sw = new StreamWriter(_Path, false))
             {
                 StringBuilder writeThis = new StringBuilder();
-                foreach (var itemToWrite in toWrite)
+                try
                 {
-                    foreach (var property in itemToWrite.GetType().GetProperties().Where(p => p.CanWrite))
+                    foreach (var itemToWrite in toWrite)
                     {
-                        writeThis.Append($"{property.Name}={property.PropertyType}={property.GetValue(itemToWrite)};");
+                        foreach (var property in itemToWrite.GetType().GetProperties().Where(p => p.CanWrite))
+                        {
+                            writeThis.Append($"{property.Name}={property.PropertyType}={property.GetValue(itemToWrite)};");
+                        }
+                        writeThis.AppendLine();
                     }
-                    writeThis.AppendLine();
+                    sw.Write(writeThis);
                 }
-                sw.Write(writeThis);
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
         }
     }
