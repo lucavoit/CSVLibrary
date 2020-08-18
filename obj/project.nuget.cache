@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "VUj4eJQH929QhsgD6zfQGLe/lC6wGuE5RXS/jtG4WyixVRqdYaLYJ1kw9sRxNIK8Dka43D+iZysZqQhlpDEmFQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Luca\\Desktop\\Programmieren\\Own\\_Library\\CSVLibrary\\CSVLibrary\\CSVLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

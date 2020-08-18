@@ -25,9 +25,9 @@ namespace CSVLibrary
         /// <typeparam name="T"></typeparam>
         /// <param name="toWrite">needs to have an empty constructor</param>
         /// <param name="seperator">Standard to ';' for csv files</param>
-        public void Write(T toWrite, char seperator = ';') 
+        public void Write(T toWrite, bool append = false, char seperator = ';') 
         {
-            using (StreamWriter sw = new StreamWriter(_Path, false))
+            using (StreamWriter sw = new StreamWriter(_Path, append))
             {
                 StringBuilder writeThis = new StringBuilder();
                 var type = toWrite.GetType();
